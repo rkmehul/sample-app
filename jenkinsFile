@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent Docker-Agent
     stages {
        
        stage ('Build') {
          steps {
-              sh 'mvn clean install -f sample-app/pom.xml'
+              sh 'mvn clean install -f pom.xml'
             }
         }        
         
